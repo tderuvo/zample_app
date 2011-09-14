@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
       render 'new'   # unsuccessful therefore reshow the new page
     else
       sign_in user
-      redirect_to user_path(user)
+      redirect_back_or(user)
     end
   end
   
